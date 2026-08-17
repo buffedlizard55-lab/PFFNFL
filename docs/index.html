@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PFFNFL • Public NFL Data Pipeline</title>
+    <style>
+        body { font-family: system-ui, sans-serif; max-width: 860px; margin: 40px auto; padding: 0 20px; line-height: 1.6; }
+        h1, h2 { color: #111; }
+        code { background: #f4f4f4; padding: 2px 6px; border-radius: 4px; }
+        .card { border: 1px solid #ddd; padding: 20px; margin: 20px 0; border-radius: 8px; }
+        .status { color: #0a0; font-weight: 600; }
+    </style>
+</head>
+<body>
+    <h1>PFFNFL</h1>
+    <p><strong>Reverse-engineered public data pipeline for Pro Football Focus (PFF) + complementary NFL sources.</strong></p>
+
+    <div class="card">
+        <h2>Purpose</h2>
+        <p>Collect reliable public NFL data (rosters, schedules, depth charts, snap counts where available, player info) for use in <strong>backtesting prediction engines</strong>.</p>
+        <p>Focus is on <strong>publicly accessible</strong> pages. Premium/PFF+ data is intentionally out of scope.</p>
+    </div>
+
+    <h2>Current Data Collected</h2>
+    <ul>
+        <li>✅ 32 NFL Teams (with conference/division)</li>
+        <li>✅ Rosters (player name, position, basic grades from public pages)</li>
+        <li>✅ Team Schedules</li>
+        <li>✅ Weekly Scores / Game links</li>
+    </ul>
+
+    <h2>Quick Start</h2>
+    <pre><code>git clone https://github.com/buffedlizard55-lab/PFFNFL.git
+cd PFFNFL
+python -m venv .venv &amp;&amp; source .venv/bin/activate
+pip install -r requirements.txt
+python scripts/run_scrape.py --season 2026 --type teams
+python scripts/fetch_all_public.py</code></pre>
+
+    <h2>Recommended Complementary Sources</h2>
+    <ul>
+        <li><a href="https://github.com/nflverse">nflverse</a> — best free structured data (pbp, rosters, snap counts, injuries)</li>
+        <li>ESPN public endpoints</li>
+        <li>Pro Football Reference</li>
+    </ul>
+
+    <p class="status">This site is served from GitHub Pages (static).</p>
+
+    <footer style="margin-top:60px; font-size:0.9em; color:#666;">
+        Data gathered for research &amp; backtesting purposes only.<br>
+        Respect site ToS and rate limits.
+    </footer>
+</body>
+</html>
