@@ -1,0 +1,13 @@
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+lxml>=4.9.0
+pandas>=2.0.0
+pydantic>=2.0.0
+httpx>=0.27.0
+python-dateutil>=2.8.2
+tenacity>=8.2.0
+rich>=13.0.0
+# For future Playwright if JS-heavy pages needed:
+# playwright>=1.40.0
+# For GH Pages / static site (optional)
+# mkdocs>=1.5.0
